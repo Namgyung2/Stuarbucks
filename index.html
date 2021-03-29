@@ -35,8 +35,15 @@
   <link rel="stylesheet" href="./css/main.css" /> 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous"></script>
-  <script defer src="./js/main.js"></script>
+
+  <!-- 스와이퍼 -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   
+
+ 
+  <script defer src="./js/main.js"></script>
+
   
 </head>
 <body>
@@ -414,7 +421,22 @@
 
         <div class="inner__left">
           <h2>공지사항</h2>
-          <div class="swiper-container"></div>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="javascript:void(0)">크리스마스 & 연말연시 스타벅스 매장 영업시간 변경 안내</a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:void(0)">[당첨자 발표] 2021 스타벅스 플래너 영수증 이벤트</a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:void(0)">스타벅스 커피 코리아 애플리케이션 버전 업데이트 안내</a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:void(0)">[당첨자 발표] 뉴이어 전자영수증 이벤트</a>
+              </div>
+            </div>
+          </div>
           <a href="javascript:void(0)" class="notice-line__more">
            <div class="material-icons">add_circle</div>
           </a>
@@ -428,8 +450,112 @@
       </div>
     </div>
 
+    <div class="promotion">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./images/promotion_slide1.jpg" alt="2021 뉴이어, 스타벅스와 함께 즐겁고 활기차게 시작하세요!" />
+            <a href="javascript:void(0)" class="btn">자세히 보기</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/promotion_slide2.jpg" alt="스타벅스 카드 e-Gift 이벤트" />
+            <a href="javascript:void(0)" class="btn">자세히 보기</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/promotion_slide3.jpg" alt="" />
+            <a href="javascript:void(0)" class="btn">자세히 보기</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/promotion_slide4.jpg" alt="" />
+            <a href="javascript:void(0)" class="btn">자세히 보기</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/promotion_slide5.jpg" alt="" />
+            <a href="javascript:void(0)" class="btn">자세히 보기</a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-prev">
+        <div class="material-icons">arrow_back</div>
+      </div>
+      <div class="swiper-next">
+        <div class="material-icons">arrow_forward</div>
+      </div>
+    </div>
   </section>
+
+
+
+<!-- REWARDS -->
+  <section class="rewards">
+    <div class="bg-left"></div>
+    <div class="bg-right"></div>
+    <div class="inner">
+
+      <div class="btn-group">
+        <div class="btn btn--reverse sign-up">회원가입</div>
+        <div class="btn sign-in">로그인</div>
+        <div class="btn gift">e-Gift 선물하기</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- YOUTUBE -->
+  <section class="youtube">
+    <div class="youtube__area">
+      <div class="player"></div>
+    </div>
+    <div class="youtube__cover">
+      <div id="player"></div>
+
+      <!-- <script> 유튜브 다시 보기
+        // 2. This code loads the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
   
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  
+        // 3. This function creates an <iframe> (and YouTube player)
+        //    after the API code downloads.
+        var player;
+        function onYouTubeIframeAPIReady() {
+          player = new YT.Player('player', {
+            height: '360',
+            width: '640',
+            videoId: 'M7lc1UVf-VE',
+            events: {
+              'onReady': onPlayerReady,
+              'onStateChange': onPlayerStateChange
+            }
+          });
+        }
+  
+        // 4. The API will call this function when the video player is ready.
+        function onPlayerReady(event) {
+          event.target.playVideo();
+        }
+  
+        // 5. The API calls this function when the player's state changes.
+        //    The function indicates that when playing a video (state=1),
+        //    the player should play for six seconds and then stop.
+        var done = false;
+        function onPlayerStateChange(event) {
+          if (event.data == YT.PlayerState.PLAYING && !done) {
+            setTimeout(stopVideo, 6000);
+            done = true;
+          }
+        }
+        function stopVideo() {
+          player.stopVideo();
+        }
+      </script> -->
+
+
+    </div>
+  </section>
 </body>
 </html>
 
